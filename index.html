@@ -969,7 +969,7 @@ async function calcAndShow() {
     document.getElementById('resContent').style.display = 'block';
 
     let col, lbl, sub;
-    if (scores.total >= 65) { col='#EF4444'; lbl='خطر مرتفع'; sub='يُنصح بالتحدث مع مختص أو شخص تثق به'; }
+    if (scores.total >= 65) { col='#EF4444'; lbl='خطر مرتفع'; sub='انتبه لمحيطك وعزّز وعيك الذاتي'; }
     else if (scores.total >= 40) { col='#F59E0B'; lbl='خطر متوسط'; sub='انتبه لمحيطك وعزّز وعيك'; }
     else { col='#10B981'; lbl='خطر منخفض'; sub='واصل هذا الوعي وساعد من حولك'; }
 
@@ -1028,7 +1028,6 @@ function buildTips(scores, a) {
   if ((a.E0||1) >= 3) tips.push({ icon:'route',    text:'تجنب الأماكن التي تُشاهد فيها مروّجين واختر طرقاً بديلة.' });
   if ((a.E2||1) >= 3) tips.push({ icon:'activity', text:'ابحث عن نوادٍ رياضية أو ثقافية — النشاط يملأ وقت الفراغ بشكل إيجابي.' });
   if ((a.P3||1) >= 3) tips.push({ icon:'shield',   text:'تدرّب على قول "لا" بثقة — الرفض مهارة تُتعلّم ولا تُورَث.' });
-  if (scores.total >= 65) tips.push({ icon:'phone', text:'لا تتردد في طلب المساعدة من مختص أو مركز دعم نفسي.' });
   if (tips.length === 0) tips.push({ icon:'check',  text:'أنت في وضع جيد — واصل هذا الوعي وساعد من حولك على فهم المخاطر.' });
   return tips;
 }
